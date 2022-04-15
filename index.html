@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>LTO</title>
+  </head>
+  <body>
+    <h1>Inventory Filter | Monthly Sales Offers</h1>
+    <p>
+      This is a filtering program for Monthly Sales Offers. The program will check current wholesale promotions against current inventory and return only items from the current inventory that will see a wholesale cost reduction.
+    </p>
+    <p>
+      Upload current inventory into Inventory (csv file)
+    </p>
+    <p>
+      Upload next month's Limited Time Offers - LTOs (csv file)
+    </p>
+    <p></p>
+    <div class="container">
+      <form  id="form">
+        <div class='ui segment'>
+          <div class='item'>
+            <label class='header' for="LTO">Inventory</label>
+            <div>
+              <input   type="file" id="invFile" accept=".csv" />
+            </div>
+          </div>
+          <div class='ui fitted divider' ></div>
+          <div class='item'>
+            <label class='header' for="inventory">Next Month's LTOs</label>
+            <div>
+              <input type="file" id="ltoFile" accept=".csv" />
+            </div>
+          </div>
+        </div>
+        <input class='ui secondary button'type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
