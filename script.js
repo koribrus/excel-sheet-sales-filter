@@ -109,10 +109,11 @@ form.addEventListener("submit", function (e) {
       });
 
       console.log(LTOinInv);
+
       // create a csv String
       const csvFile = arrayToCSVString(LTOinInv, header);
 
-      const myFile = new File([csvFile], "demo.txt", {
+      const myFile = new File([csvFile], "LTOs_in_inventory.txt", {
         type: "text/plain;charset=utf-8",
       });
       saveAs(myFile);
